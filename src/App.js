@@ -11,6 +11,7 @@ import NavBar from "./components/NavBar";
 import {  Box, Container, CssBaseline, Toolbar, } from "@mui/material";
 import AppBarSimple from "./components/AppBarSimple";
 import { TestPage } from "./pages/TestPage";
+import Learning from "./pages/Learning";
 
 function App() {
   const drawerWidth = 240;
@@ -42,6 +43,7 @@ function App() {
           <Route path="/user-profile/:id" element={<UserProfile />} />
           <Route path="/test-page" element={<TestPage />} />
           <Route path="/tours" element={<Tour />} />
+          <Route path="/learning" element={<Learning />} />
           {/* ... other routes */}
         </Routes>
       </Box>

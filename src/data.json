@@ -2,7 +2,7 @@
     {
       "id": 1,
       "name": "Niagara Falls",
-      "tours": [
+      "course_list": [
         {
           "id": 1,
           "name": "Immerse into the Falls",
@@ -44,7 +44,7 @@
     {
       "id": 2,
       "name": "Las Vegas",
-      "tours": [
+      "course_list": [
         {
           "id": 4,
           "name": "All Around the World",
