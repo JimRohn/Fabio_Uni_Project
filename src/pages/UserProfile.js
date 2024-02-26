@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { rows } from '../components/UserList'; // Adjust the import path as needed
+import { rows } from './UserList'; // Adjust the import path as needed
 import UserCard from '../components/UserCard'; // Import your UserCard component
 import SearchAppBar from '../components/SearchAppBar/SearchAppBar';
 const UserProfile = () => {

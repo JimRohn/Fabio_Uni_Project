@@ -1,12 +1,12 @@
 import { AccessTime } from "@mui/icons-material";
-import { Grid, Paper, Typography, Box, Rating, Container } from "@mui/material";
+import { Grid, Paper, Typography, Box,  } from "@mui/material";
 
-const TourCard = ({course}) => {
+const CourseCard = ({course}) => {
   return (
     
     <Grid item xs={4} >
       <Paper elevation={3} variant="elevation">
-        <img src={course.image} alt="tour" className="img" />
+        <img src={course.image} alt="course" className="img" />
         <Box padding={1}>
           
           <Typography variant="subtitle1" component="h2">
@@ -19,17 +19,7 @@ const TourCard = ({course}) => {
                 {course.duration} hours
             </Typography>
         </Box>
-        <Box display={"flex"} alignItems={"center"} padding={3}>
-
-            <Rating name="read-only" value={4.5}  precision={0.5}readOnly />
-            <Typography variant="subtitle2" component="p" marginLeft={1}/>
-                {course.rating}
-                <Typography />
-                <Typography variant="subtitle2" component="p" marginLeft={1.5}/>
-400 reviews
-                <Typography />
-
-        </Box>
+       
         
       </Paper>
     </Grid>
@@ -38,4 +28,4 @@ const TourCard = ({course}) => {
     );
 
 };
-export default TourCard;
+export default CourseCard;

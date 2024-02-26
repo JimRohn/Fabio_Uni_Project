@@ -6,12 +6,10 @@ import Button from '@mui/joy/Button';
 import Card from '@mui/joy/Card';
 import CardContent from '@mui/joy/CardContent';
 import CardActions from '@mui/joy/CardActions';
-import IconButton from '@mui/joy/IconButton';
 import Typography from '@mui/joy/Typography';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 
 export default function UserCard({ user }) { // Accept user prop
-  console.log(user);
     return (
     <Card
       variant="outlined"
@@ -19,33 +17,29 @@ export default function UserCard({ user }) { // Accept user prop
         width: 320,
         overflow: 'auto',
         resize: 'horizontal',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center', // Center the content
+        gap: 2, // Adds space between items
       }}
     >
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}
-      >
-        <Avatar src={user.avatar} size="lg" /> {/* Use dynamic data */}
-        {/* Removed AvatarGroup for simplicity, add it back if needed with dynamic data */}
-      </Box>
-      <CardContent>
-        <Typography level="title-lg">{user.name}</Typography> {/* Use dynamic data */}
-        <Typography level="body-sm">
-          {user.description} {/* Use dynamic data */}
-        </Typography>
+      <Avatar src={user.avatar} alt={user.name} sx={{ width: 80, height: 80 }} /> {/* Use dynamic data and adjust size */}
+      <CardContent sx={{ textAlign: 'center' }}> 
+      {/* Center the text */}
+      
+        <Typography level="h6">{user.name}</Typography> {/* Use dynamic data */}
+        <Typography level="body2">{user.bio || 'No bio available'}</Typography> {/* Use dynamic data or fallback */}
+       Specialisation: <Typography level="body2">{user.specialisation}</Typography> {/* Example for speciality */}
+       e-mail: <Typography level="body2">{user.email}</Typography> {/* Example for email */}
+      phone:  <Typography level="body2">{user.phone}</Typography> {/* Example for phone */}
+     location: <Typography level="body2">{user.location}</Typography> {/* Example for location */}
       </CardContent>
-      <CardActions buttonFlex="0 1 120px">
-        <IconButton variant="outlined" color="neutral" sx={{ mr: 'auto' }}>
-          <FavoriteBorder />
-        </IconButton>
+      <CardActions sx={{ justifyContent: 'center' }}> {/* Center the buttons */}
         <Button variant="outlined" color="neutral">
           View
         </Button>
         <Button variant="solid" color="primary">
-          Join
+          Contact
         </Button>
       </CardActions>
     </Card>

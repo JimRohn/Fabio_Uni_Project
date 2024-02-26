@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -13,23 +14,30 @@ import PeopleIcon from '@mui/icons-material/People';
 import WorkIcon from '@mui/icons-material/Work';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import SchoolIcon from '@mui/icons-material/School';
-import HomeIcon from '@mui/icons-material/Home';  
+import HomeIcon from '@mui/icons-material/Home';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+
 const drawerWidth = 240;
 
 const drawerItems = [
-  { text: "Home", icon: <HomeIcon /> , path: "/home"},
-  { text: "People", icon: <PeopleIcon />, path: "/people"},
-  { text: "Matters", icon: <WorkIcon />, path: "/matters"},
-  { text: "Events", icon: <CalendarMonthIcon />, path: "/events"},
-  { text: "Learning", icon: <SchoolIcon />, path: "/learning"},
+  { text: "Home", icon: <HomeIcon />, path: "/" }, // Changed path to "/"
+  { text: "People", icon: <PeopleIcon />, path: "/users" }, // Adjusted path
+  { text: "Matters", icon: <WorkIcon />, path: "/matters" },
+  { text: "Events", icon: <CalendarMonthIcon />, path: "/events" },
+  { text: "Learning", icon: <SchoolIcon />, path: "/learning" },
 ];
 
-
 export default function PermanentDrawerLeft() {
+  const navigate = useNavigate(); // Hook for navigation
+
+  const handleListItemClick = (path) => {
+    navigate(path);
+  };
+
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
- 
+
       <Drawer
         sx={{
           width: drawerWidth,
@@ -47,7 +55,7 @@ export default function PermanentDrawerLeft() {
         <List>
           {drawerItems.map((item) => (
             <ListItem key={item.text} disablePadding>
-              <ListItemButton>
+              <ListItemButton onClick={() => handleListItemClick(item.path)}>
                 <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.text} />
               </ListItemButton>
@@ -55,9 +63,6 @@ export default function PermanentDrawerLeft() {
           ))}
         </List>
       </Drawer>
-      
-    
-    
     </Box>
   );
 }

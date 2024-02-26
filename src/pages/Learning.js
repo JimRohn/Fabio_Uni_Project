@@ -1,9 +1,8 @@
-import { Container, Grid, Typography } from "@mui/material";
-import TourCard from "../components/CourseCard";
+import {  Grid, Typography } from "@mui/material";
+import CourseCard from "../components/CourseCard";
 import courses from "../data.json";
 import React from "react";
 import Box from "@mui/material/Box";
-import CourseCard from "../components/CourseCard";
 
 
 const Learning = () => (
@@ -20,12 +19,12 @@ const Learning = () => (
             <Typography
               variant="h4"
               component="h2"
-              marginTop={3}
+              marginTop={0}
               marginBottom={3}
             >
-              Top {course.name} Tours
+              Top {course.type} Courses
             </Typography>
-            <Grid container spacing={4}>
+            <Grid container spacing={4} marginBottom={18} marginTop={0}>
               {course.course_list.map((course, index) => 
                 <CourseCard  course={course} key={index} />
               )}
