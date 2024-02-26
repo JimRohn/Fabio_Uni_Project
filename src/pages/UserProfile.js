@@ -1,9 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { rows } from '../components/UserListGrid'; // Adjust the import path as needed
+import { rows } from '../components/UserList'; // Adjust the import path as needed
 import UserCard from '../components/UserCard'; // Import your UserCard component
-import AppBarSimple from '../components/AppBarSimple'; // Import your AppBarSimple component
-
+import SearchAppBar from '../components/SearchAppBar/SearchAppBar';
 const UserProfile = () => {
   const { id } = useParams();
   const user = rows.find((user) => user.id === parseInt(id, 10));
@@ -27,7 +26,7 @@ const UserProfile = () => {
 
 
     <div style={{ display: 'flex', justifyContent: 'center', padding: '20px' }}>
-    <AppBarSimple />
+    <SearchAppBar />
       <UserCard user={userDataForCard} />
     </div>
   );

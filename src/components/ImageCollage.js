@@ -34,61 +34,61 @@ export default function QuiltedImageList() {
 
 const itemData = [
   {
-    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-    title: 'Breakfast',
+    img: '/images/Quelted/AI3.jpeg',
+    title: 'AI3',
     rows: 2,
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-    title: 'Burger',
+    img: '/images/Quelted/AI4.jpeg',
+    title: 'AI4',
   },
   {
-    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-    title: 'Camera',
+    img: '/Images/Quelted/AI5.jpeg',
+    title: 'AI5',
   },
   {
-    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-    title: 'Coffee',
+    img: '/Images/Quelted/AI6.jpeg',
+    title: 'AI6',
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-    title: 'Hats',
+    img: '/Images/Quelted/AI7.jpeg',
+    title: 'AI7',
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-    title: 'Honey',
-    author: '@arwinneil',
+    img: '/Images/Quelted/AI8.jpeg',
+    title: 'AI8',
+  
     rows: 2,
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-    title: 'Basketball',
+    img: '/Images/Quelted/AI9.jpeg',
+    title: 'AI9',
   },
   {
-    img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-    title: 'Fern',
+    img: '/Images/Quelted/AI10.jpeg',
+    title: 'AI10',
   },
   {
-    img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-    title: 'Mushrooms',
+    img: '/Images/Quelted/AI11.jpeg',
+    title: 'AI11',
     rows: 2,
     cols: 2,
   },
   {
-    img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-    title: 'Tomato basil',
+    img: '/Images/Quelted/AI12.jpeg',
+    title: 'AI12',
   },
   {
-    img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-    title: 'Sea star',
+    img: '/Images/Quelted/AI13.jpeg',
+    title: 'AI13',
   },
   {
-    img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-    title: 'Bike',
+    img: '/Images/Quelted/AI14.jpeg',
+    title: 'AI14',
     cols: 2,
   },
 ];

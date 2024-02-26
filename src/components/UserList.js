@@ -48,7 +48,7 @@ const rows = [
   { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
 ];
 
-export default function DataGridDemo() {
+export default function UserList() {
   const navigate = useNavigate();
   const handleRowClick = (params) => {
     // Navigate to the user profile page with the user's id

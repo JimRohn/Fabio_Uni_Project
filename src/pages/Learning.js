@@ -1,8 +1,6 @@
 import { Container, Grid, Typography } from "@mui/material";
 import TourCard from "../components/CourseCard";
-import PrimarySearchAppBar from "../components/SearchAppBar";
 import courses from "../data.json";
-import { ReactDOM } from "react";
 import React from "react";
 import Box from "@mui/material/Box";
 import CourseCard from "../components/CourseCard";
